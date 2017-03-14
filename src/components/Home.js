@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router'
+import { Link } from 'react-router';
 
-class Home extends Component {  
+class Home extends Component {
+
+  handleSubmit(event) {
+    event.preventDefault();
+    let teacherName = event.target.elements[0].value;
+    let teacherTopic = event.target.elements[1].value;
+    let path = `featured/${teacherTopic}/${teacherName}`
+    browserHistory.push(path);
+  }
+
   render() {
     return (
       <div className="main-content home">
