@@ -2,14 +2,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-// CSS 
+// CSS
 import './css/style.css';
 
-// Components
-import App from './components/App';
+//Routes
+import routes from './router'
+
 
 // Render
-render(
-  <App />,
-  document.getElementById('root')
-);
+render(routes, document.getElementById('root'));
